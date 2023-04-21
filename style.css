@@ -15,7 +15,12 @@ body {
     width: 375px;
 }
 
-.top > h1 {
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.title > h1 {
     text-align: center;
     color: hsl(300, 43%, 22%);
     font-size: 48px;
@@ -46,6 +51,12 @@ body {
     margin-bottom: 0;
     color: hsl(300, 43%, 22%);
     font-weight: 700;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .review {
@@ -109,5 +120,61 @@ body {
         background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
         background-repeat: no-repeat, no-repeat;
         background-position: top left, bottom right;
+    }
+    .container {
+        width: 960px;
+    }
+    .top {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .title {
+        width: 35%;
+    }
+    .title > h1,
+    .company-description {
+        text-align: left;
+    }
+    .company-description {
+        font-size: 15px;
+    }
+    .rating-container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-self: center;
+        justify-self: flex-end;
+        margin-left: auto;
+    }
+    .rating {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 350px;
+        padding-left: 8px;
+    }
+    .first {
+        align-self: flex-start;
+    }
+    .middle {
+        align-self: center;
+    }
+    .last {
+        align-self: flex-end;
+    }
+    .bottom {
+        flex-direction: row;
+        height: 320px;
+    }
+    .colton {
+        align-self: flex-start;
+        margin-right: 1rem;
+    }
+    .irene {
+        margin-right: 1rem;
+    }
+    .anne {
+        align-self: flex-end;
     }
 }
